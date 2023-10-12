@@ -1,0 +1,9 @@
+<div>
+    <h1>Upload the file </h1>
+    <!-- <input className='upload-input' type="file"  />
+   <button className='upload-btn' >Upload</button> -->
+   <input type="file" (change)="onFileChange($event)">
+<button routerLink="/data" (click)="uploadFile()">Upload</button>
+<div *ngIf="uploadStatus$ | async as uploadStatus">
+    {{ uploadStatus }}</div>
+</div>
